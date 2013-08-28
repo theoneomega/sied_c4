@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background: #000000 url(images/img03.jpg) repeat-x left top;
+	background: #000000 url(/assets/plataforma.png) repeat-x left top;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #837669;

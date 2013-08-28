@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130828181426) do
+ActiveRecord::Schema.define(:version => 20130828212533) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -52,6 +52,48 @@ ActiveRecord::Schema.define(:version => 20130828181426) do
     t.string   "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "priority"
+    t.datetime "event_date"
+    t.text     "description"
+    t.datetime "hour"
+    t.integer  "victims",         :precision => 38, :scale => 0
+    t.integer  "arrested",        :precision => 38, :scale => 0
+    t.integer  "suspects",        :precision => 38, :scale => 0
+    t.integer  "vehicles",        :precision => 38, :scale => 0
+    t.text     "observations"
+    t.string   "backup_file"
+    t.integer  "weapons_id",      :precision => 38, :scale => 0
+    t.integer  "drugs_id",        :precision => 38, :scale => 0
+    t.string   "source"
+    t.integer  "analyst_id",      :precision => 38, :scale => 0
+    t.integer  "zone_id",         :precision => 38, :scale => 0
+    t.integer  "status_event_id", :precision => 38, :scale => 0
+    t.integer  "crime_id",        :precision => 38, :scale => 0
+    t.integer  "township_id",     :precision => 38, :scale => 0
+    t.integer  "place_id",        :precision => 38, :scale => 0
+    t.integer  "address_id",      :precision => 38, :scale => 0
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "ci"
+    t.string   "first_name"
+    t.string   "last_name1"
+    t.string   "last_name2"
+    t.string   "alias"
+    t.datetime "birth_date"
+    t.string   "original"
+    t.string   "gender"
+    t.boolean  "record",       :precision => 1,  :scale => 0
+    t.string   "ocupation"
+    t.text     "onservations"
+    t.integer  "status_id",    :precision => 38, :scale => 0
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
   end
 
   create_table "person_statuses", :force => true do |t|

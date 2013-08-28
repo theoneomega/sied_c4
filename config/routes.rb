@@ -1,5 +1,11 @@
 Sied::Application.routes.draw do
 
+  resources :people
+
+
+  resources :events
+
+
   get "catalogs/index"
 
   resources :analysts

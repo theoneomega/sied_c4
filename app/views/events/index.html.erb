@@ -1,0 +1,63 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Priority</th>
+    <th>Event date</th>
+    <th>Description</th>
+    <th>Hour</th>
+    <th>Victims</th>
+    <th>Arrested</th>
+    <th>Suspects</th>
+    <th>Vehicles</th>
+    <th>Observations</th>
+    <th>Backup file</th>
+    <th>Weapons</th>
+    <th>Drugs</th>
+    <th>Source</th>
+    <th>Analyst</th>
+    <th>Zone</th>
+    <th>Status event</th>
+    <th>Crime</th>
+    <th>Township</th>
+    <th>Place</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.id %></td>
+    <td><%= event.priority %></td>
+    <td><%= event.event_date %></td>
+    <td><%= event.description %></td>
+    <td><%= event.hour %></td>
+    <td><%= event.victims %></td>
+    <td><%= event.arrested %></td>
+    <td><%= event.suspects %></td>
+    <td><%= event.vehicles %></td>
+    <td><%= event.observations %></td>
+    <td><%= event.backup_file %></td>
+    <td><%= event.weapons_id %></td>
+    <td><%= event.drugs_id %></td>
+    <td><%= event.source %></td>
+    <td><%= event.analyst_id %></td>
+    <td><%= event.zone_id %></td>
+    <td><%= event.status_event_id %></td>
+    <td><%= event.crime_id %></td>
+    <td><%= event.township_id %></td>
+    <td><%= event.place_id %></td>
+    <td><%= event.address_id %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_event_path %>

@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @event.id %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @event.priority %>
+</p>
+
+<p>
+  <b>Event date:</b>
+  <%= @event.event_date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>
+
+<p>
+  <b>Hour:</b>
+  <%= @event.hour %>
+</p>
+
+<p>
+  <b>Victims:</b>
+  <%= @event.victims %>
+</p>
+
+<p>
+  <b>Arrested:</b>
+  <%= @event.arrested %>
+</p>
+
+<p>
+  <b>Suspects:</b>
+  <%= @event.suspects %>
+</p>
+
+<p>
+  <b>Vehicles:</b>
+  <%= @event.vehicles %>
+</p>
+
+<p>
+  <b>Observations:</b>
+  <%= @event.observations %>
+</p>
+
+<p>
+  <b>Backup file:</b>
+  <%= @event.backup_file %>
+</p>
+
+<p>
+  <b>Weapons:</b>
+  <%= @event.weapons_id %>
+</p>
+
+<p>
+  <b>Drugs:</b>
+  <%= @event.drugs_id %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @event.source %>
+</p>
+
+<p>
+  <b>Analyst:</b>
+  <%= @event.analyst_id %>
+</p>
+
+<p>
+  <b>Zone:</b>
+  <%= @event.zone_id %>
+</p>
+
+<p>
+  <b>Status event:</b>
+  <%= @event.status_event_id %>
+</p>
+
+<p>
+  <b>Crime:</b>
+  <%= @event.crime_id %>
+</p>
+
+<p>
+  <b>Township:</b>
+  <%= @event.township_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @event.place_id %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @event.address_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

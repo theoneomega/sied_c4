@@ -1,0 +1,70 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% @person.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :ci %><br />
+    <%= f.text_field :ci %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name1 %><br />
+    <%= f.text_field :last_name1 %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name2 %><br />
+    <%= f.text_field :last_name2 %>
+  </div>
+  <div class="field">
+    <%= f.label :alias %><br />
+    <%= f.text_field :alias %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br />
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :original %><br />
+    <%= f.text_field :original %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :record %><br />
+    <%= f.check_box :record %>
+  </div>
+  <div class="field">
+    <%= f.label :ocupation %><br />
+    <%= f.text_field :ocupation %>
+  </div>
+  <div class="field">
+    <%= f.label :onservations %><br />
+    <%= f.text_area :onservations %>
+  </div>
+
+  <div class="field">
+    <%=f.label :person_status %><br />
+    
+    <%= f.collection_select :person_status, PersonStatus.all, :id, :description %>
+    <%#= f.collection_select(:person_status  , PersonStatus.all, :id, :description, {:prompt => false}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

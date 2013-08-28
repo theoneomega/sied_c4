@@ -1,0 +1,101 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.date_select :event_date %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :hour %><br />
+    <%= f.time_select :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :victims %><br />
+    <%= f.number_field :victims %>
+  </div>
+  <div class="field">
+    <%= f.label :arrested %><br />
+    <%= f.number_field :arrested %>
+  </div>
+  <div class="field">
+    <%= f.label :suspects %><br />
+    <%= f.number_field :suspects %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicles %><br />
+    <%= f.number_field :vehicles %>
+  </div>
+  <div class="field">
+    <%= f.label :observations %><br />
+    <%= f.text_area :observations %>
+  </div>
+  <div class="field">
+    <%= f.label :backup_file %><br />
+    <%= f.text_field :backup_file %>
+  </div>
+  <div class="field">
+    <%= f.label :weapons_id %><br />
+    <%= f.number_field :weapons_id %>
+  </div>
+  <div class="field">
+    <%= f.label :drugs_id %><br />
+    <%= f.number_field :drugs_id %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :analyst_id %><br />
+    <%= f.number_field :analyst_id %>
+  </div>
+  <div class="field">
+    <%= f.label :zone_id %><br />
+    <%= f.number_field :zone_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status_event_id %><br />
+    <%= f.number_field :status_event_id %>
+  </div>
+  <div class="field">
+    <%= f.label :crime_id %><br />
+    <%= f.number_field :crime_id %>
+  </div>
+  <div class="field">
+    <%= f.label :township_id %><br />
+    <%= f.number_field :township_id %>
+  </div>
+  <div class="field">
+    <%= f.label :place_id %><br />
+    <%= f.number_field :place_id %>
+  </div>
+  <div class="field">
+    <%= f.label :address_id %><br />
+    <%= f.number_field :address_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
