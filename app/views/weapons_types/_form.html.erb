@@ -1,0 +1,22 @@
+<%= form_for(@weapons_type) do |f| %>
+  <% if @weapons_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weapons_type.errors.count, "error") %> prohibited this weapons_type from being saved:</h2>
+
+      <ul>
+        <% @weapons_type.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

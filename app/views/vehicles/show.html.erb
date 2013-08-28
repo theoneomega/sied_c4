@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @vehicle.id %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @vehicle.brand %>
+</p>
+
+<p>
+  <b>Sub brand:</b>
+  <%= @vehicle.sub_brand %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @vehicle.model %>
+</p>
+
+<p>
+  <b>Plate:</b>
+  <%= @vehicle.plate %>
+</p>
+
+<p>
+  <b>Serial numero:</b>
+  <%= @vehicle.serial_numero %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @vehicle.color %>
+</p>
+
+<p>
+  <b>Stolen:</b>
+  <%= @vehicle.stolen %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @vehicle.status %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @vehicle.details %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @vehicle.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

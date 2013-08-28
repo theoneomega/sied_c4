@@ -1,0 +1,40 @@
+<script type="text/javascript">
+	
+	$(document).ready(
+		function()
+		{
+			$('#dock').Fisheye(
+				{
+					maxWidth: 100,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container',
+					itemWidth: 180,
+					proximity: 90,
+					halign : 'center'
+				}
+			)
+		}
+	);
+
+</script>
+<p>Agente : <%= @agente %> </p>
+
+<p>
+<div class="dock" id="dock">
+  <div class="dock-container" style="background-color: black">
+    
+    
+  <%=link_to( image_tag("fichas.png"), {:controller=>"catalogs", :action=>"index"}, :class=>"dock-item") %>
+  <a class="dock-item" href="evento.html"><%= image_tag ("eventos.png") %><span>EVENTOS</span></a> 
+  <a class="dock-item" href="#"><%= image_tag ("casos.png") %><span>CASOS</span></a> 
+  <a class="dock-item" href="#"><%= image_tag ("actividades.png") %><span>ACTIVIDADESS</span></a> 
+  <a class="dock-item" href="#"><%= image_tag ("estadisticas.png") %><span>ESTADISTICAS</span></a> 
+ 
+</div>
+</div>  
+  <h1><%= link_to t(:wcatalogs), { :controller => "catalogs", :action => "index" } %></h1>
+
+</p>
+
+

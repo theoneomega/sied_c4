@@ -1,0 +1,25 @@
+<h1>Listing weapons_types</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weapons_types.each do |weapons_type| %>
+  <tr>
+    <td><%= weapons_type.id %></td>
+    <td><%= weapons_type.description %></td>
+    <td><%= link_to 'Show', weapons_type %></td>
+    <td><%= link_to 'Edit', edit_weapons_type_path(weapons_type) %></td>
+    <td><%= link_to 'Destroy', weapons_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weapons type', new_weapons_type_path %>
