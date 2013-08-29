@@ -1,5 +1,5 @@
 <h1>Listing people</h1>
-
+<div class="CSSTableGenerator">
 <table>
   <tr>
     <th>Id</th>
@@ -9,11 +9,11 @@
     <th>Last name2</th>
     <th>Alias</th>
     <th>Birth date</th>
-    <th>Original</th>
-    <th>Gender</th>
+    <th>Originative</th>
+    <th>Genre</th>
     <th>Record</th>
-    <th>Ocupation</th>
-    <th>Onservations</th>
+    <th>Profession</th>
+    <th>Observations</th>
     <th>Status</th>
     <th></th>
     <th></th>
@@ -29,19 +29,19 @@
     <td><%= person.last_name2 %></td>
     <td><%= person.alias %></td>
     <td><%= person.birth_date %></td>
-    <td><%= person.original %></td>
-    <td><%= person.gender %></td>
+    <td><%= person.originative %></td>
+    <td><%= person.genre %></td>
     <td><%= person.record %></td>
-    <td><%= person.ocupation %></td>
-    <td><%= person.onservations %></td>
-    <td><%= person.status_id %></td>
+    <td><%= person.profession %></td>
+    <td><%= person.observations %></td>
+    <td><%= person.status.description %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
 
 <%= link_to 'New Person', new_person_path %>

@@ -52,7 +52,7 @@
 
   <div class="field">
     <%=f.label :person_id%><br />
-    <%= f.collection_select(:person_id, Person.all, :id, :alias, {:prompt => false}) %>
+    <%= f.collection_select(:person_id, Person.all, :id, :fullname, {:prompt => false}) %>
   </div>
 
 

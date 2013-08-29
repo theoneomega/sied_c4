@@ -34,36 +34,34 @@
   </div>
   <div class="field">
     <%= f.label :birth_date %><br />
-    <%= f.date_select :birth_date %>
+    <%= f.date_select :birth_date,start_year: 1900 %>
   </div>
   <div class="field">
-    <%= f.label :original %><br />
-    <%= f.text_field :original %>
+    <%= f.label :originative %><br />
+    <%= f.text_field :originative %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
   </div>
   <div class="field">
     <%= f.label :record %><br />
     <%= f.check_box :record %>
   </div>
   <div class="field">
-    <%= f.label :ocupation %><br />
-    <%= f.text_field :ocupation %>
+    <%= f.label :profession %><br />
+    <%= f.text_field :profession %>
   </div>
   <div class="field">
-    <%= f.label :onservations %><br />
-    <%= f.text_area :onservations %>
+    <%= f.label :observations %><br />
+    <%= f.text_area :observations %>
   </div>
-
   <div class="field">
-    <%=f.label :person_status %><br />
-    
-    <%= f.collection_select :person_status, PersonStatus.all, :id, :description %>
-    <%#= f.collection_select(:person_status  , PersonStatus.all, :id, :description, {:prompt => false}) %>
+    <%= f.label :status_id %><br />
+    <%= f.collection_select(:status_id, Status.where(:status_type => "persona"), :id, :description, {:prompt => "seleccione el estatus de la persona"}) %>
+  <%#= f.collection_select(:status_id, Status.all), :id, :name, {:prompt => false}) %>
+  <%#= f.number_field :status_id %>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -18,7 +18,7 @@ class PeopleControllerTest < ActionController::TestCase
 
   test "should create person" do
     assert_difference('Person.count') do
-      post :create, person: { alias: @person.alias, birth_date: @person.birth_date, ci: @person.ci, first_name: @person.first_name, gender: @person.gender, id: @person.id, last_name1: @person.last_name1, last_name2: @person.last_name2, ocupation: @person.ocupation, onservations: @person.onservations, original: @person.original, record: @person.record, status_id: @person.status_id }
+      post :create, person: { alias: @person.alias, birth_date: @person.birth_date, ci: @person.ci, first_name: @person.first_name, genre: @person.genre, id: @person.id, last_name1: @person.last_name1, last_name2: @person.last_name2, observations: @person.observations, originative: @person.originative, profession: @person.profession, record: @person.record, status_id: @person.status_id }
     end
 
     assert_redirected_to person_path(assigns(:person))
@@ -35,7 +35,7 @@ class PeopleControllerTest < ActionController::TestCase
   end
 
   test "should update person" do
-    put :update, id: @person, person: { alias: @person.alias, birth_date: @person.birth_date, ci: @person.ci, first_name: @person.first_name, gender: @person.gender, id: @person.id, last_name1: @person.last_name1, last_name2: @person.last_name2, ocupation: @person.ocupation, onservations: @person.onservations, original: @person.original, record: @person.record, status_id: @person.status_id }
+    put :update, id: @person, person: { alias: @person.alias, birth_date: @person.birth_date, ci: @person.ci, first_name: @person.first_name, genre: @person.genre, id: @person.id, last_name1: @person.last_name1, last_name2: @person.last_name2, observations: @person.observations, originative: @person.originative, profession: @person.profession, record: @person.record, status_id: @person.status_id }
     assert_redirected_to person_path(assigns(:person))
   end
 

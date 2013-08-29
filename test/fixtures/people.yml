@@ -7,12 +7,12 @@ one:
   last_name1: MyString
   last_name2: MyString
   alias: MyString
-  birth_date: 2013-08-28
-  original: MyString
-  gender: MyString
+  birth_date: 2013-08-29
+  originative: MyString
+  genre: MyString
   record: false
-  ocupation: MyString
-  onservations: MyText
+  profession: MyString
+  observations: MyText
   status_id: 1
 
 two:
@@ -22,10 +22,10 @@ two:
   last_name1: MyString
   last_name2: MyString
   alias: MyString
-  birth_date: 2013-08-28
-  original: MyString
-  gender: MyString
+  birth_date: 2013-08-29
+  originative: MyString
+  genre: MyString
   record: false
-  ocupation: MyString
-  onservations: MyText
+  profession: MyString
+  observations: MyText
   status_id: 1
