@@ -8,7 +8,11 @@ gem 'rails', '3.2.13'
 gem 'ruby-oci8'
 gem 'activerecord-oracle_enhanced-adapter'
 gem 'devise'
-
+#gem 'therubyracer', :platform => :ruby
+gem 'twitter-bootstrap-rails'
+gem 'will_paginate-bootstrap'
+#gem "less-rails"
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,8 +26,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
+group :development do
+  gem 'better_errors'
+end
+gem "binding_of_caller" 
+gem 'jquery-rails', '~> 2.0.1'
+gem "nested_form"
+gem 'ckeditor_rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

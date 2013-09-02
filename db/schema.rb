@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(:version => 20130829221010) do
     t.datetime "updated_at",                                  :null => false
   end
 
+  create_table "event_statuses", :force => true do |t|
+    t.string   "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "events", :force => true do |t|
     t.string   "priority"
     t.datetime "event_date"
@@ -86,12 +92,18 @@ ActiveRecord::Schema.define(:version => 20130829221010) do
     t.datetime "birth_date"
     t.string   "originative"
     t.string   "genre"
-    t.boolean  "record",                     :precision => 1, :scale => 0
+    t.boolean  "record",       :precision => 1,  :scale => 0
     t.string   "profession"
     t.text     "observations"
-    t.string   "status_id",    :limit => 20
-    t.datetime "created_at",                                               :null => false
-    t.datetime "updated_at",                                               :null => false
+    t.integer  "status_id",    :precision => 38, :scale => 0
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
+
+  create_table "person_statuses", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "places", :force => true do |t|
