@@ -1,5 +1,8 @@
 Sied::Application.routes.draw do
 
+  resources :weapons
+
+
   resources :statuses
 
 

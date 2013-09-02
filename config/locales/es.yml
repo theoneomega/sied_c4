@@ -102,6 +102,7 @@ es:
   waddress: Direccion
   wanalista: Analista
   wplaces: Lugares
+  ci: Carpeta de investigacion
   towns: Municipios
   email: Correo electronico
   username: Usuario
@@ -179,3 +180,12 @@ es:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  weapons:
+    id: 1
+    brand: MyString
+    model: MyString
+    serial_number: MyString
+    weapon: MyString
+    caliber: MyString
+    person_id: 1
+    weapon_type_id: 1
