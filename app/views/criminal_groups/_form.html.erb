@@ -1,0 +1,40 @@
+<%= form_for(@criminal_group) do |f| %>
+  <% if @criminal_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@criminal_group.errors.count, "error") %> prohibited this criminal_group from being saved:</h2>
+
+      <ul>
+        <% @criminal_group.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%#= f.link_to_add "Agregar weapon", :weapon_criminalgroup, :class => "add subjects btn btn-primary insert_in_table", :style => "vertical-align: top;" %>
+    <%= f.label :vehicle_id %><br />
+    <%= f.collection_select(:vehicle_id, Vehicle.all, :id, :fulldescription, {:prompt => "seleccione vehiculo"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weapon_id %><br />
+    <%= f.collection_select(:weapon_id, Weapon.all, :id, :fulldescription, {:prompt => "seleccione arma"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :drug_id %><br />
+    <%= f.collection_select(:drug_id, Drug.all, :id, :kind, {:prompt => "seleccione tipo de droga"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :area_id %><br />
+    <%= f.collection_select(:area_id, Area.all, :id, :description, {:prompt => "seleccione area"}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit nil, :class => "btn btn-primary"%>
+  </div>
+<% end %>

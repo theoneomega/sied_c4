@@ -1,0 +1,25 @@
+<h1>Listing vehicles_criminalgroups</h1>
+
+<table>
+  <tr>
+    <th>Vehicle</th>
+    <th>Criminal group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vehicles_criminalgroups.each do |vehicles_criminalgroup| %>
+  <tr>
+    <td><%= vehicles_criminalgroup.vehicle_id %></td>
+    <td><%= vehicles_criminalgroup.criminal_group_id %></td>
+    <td><%= link_to 'Show', vehicles_criminalgroup %></td>
+    <td><%= link_to 'Edit', edit_vehicles_criminalgroup_path(vehicles_criminalgroup) %></td>
+    <td><%= link_to 'Destroy', vehicles_criminalgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehicles criminalgroup', new_vehicles_criminalgroup_path %>

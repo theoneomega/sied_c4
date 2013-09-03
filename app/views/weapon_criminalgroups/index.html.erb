@@ -1,0 +1,25 @@
+<h1>Listing weapon_criminalgroups</h1>
+
+<table>
+  <tr>
+    <th>Weapon</th>
+    <th>Criminal group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weapon_criminalgroups.each do |weapon_criminalgroup| %>
+  <tr>
+    <td><%= weapon_criminalgroup.weapon_id %></td>
+    <td><%= weapon_criminalgroup.criminal_group_id %></td>
+    <td><%= link_to 'Show', weapon_criminalgroup %></td>
+    <td><%= link_to 'Edit', edit_weapon_criminalgroup_path(weapon_criminalgroup) %></td>
+    <td><%= link_to 'Destroy', weapon_criminalgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weapon criminalgroup', new_weapon_criminalgroup_path %>

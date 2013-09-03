@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @criminal_group.id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @criminal_group.description %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @criminal_group.vehicle_id %>
+</p>
+
+<p>
+  <b>Weapon:</b>
+  <%= @criminal_group.weapon_id %>
+</p>
+
+<p>
+  <b>Drug:</b>
+  <%= @criminal_group.drug_id %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @criminal_group.area_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_criminal_group_path(@criminal_group) %> |
+<%= link_to 'Back', criminal_groups_path %>

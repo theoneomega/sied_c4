@@ -7,7 +7,7 @@ development:
   adapter: oracle_enhanced
   database: xe
   host: localhost
-  username: sieid
-  password: sieid
+  username: mexico2
+  password: mexico2
   port: 1521
 

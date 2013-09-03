@@ -1,0 +1,25 @@
+<%= form_for(@weapon_criminalgroup) do |f| %>
+  <% if @weapon_criminalgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weapon_criminalgroup.errors.count, "error") %> prohibited this weapon_criminalgroup from being saved:</h2>
+
+      <ul>
+      <% @weapon_criminalgroup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weapon_id %><br />
+    <%= f.number_field :weapon_id %>
+  </div>
+  <div class="field">
+    <%= f.label :criminal_group_id %><br />
+    <%= f.number_field :criminal_group_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

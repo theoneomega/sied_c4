@@ -1,43 +1,53 @@
 <h1>Listing vehicles</h1>
+<div  class="well ">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Brand</th>
+        <th>Line</th>
+        <th>Model</th>
+        <th>Plate</th>
+        <th>Serial number</th>
+        <th>Color</th>
+        <th>Stolen</th>
+        <th>Status</th>
+        <th>Details</th>
+        <th>Person</th>
+        <th> <%= t(:actions) %> </th>
 
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Brand</th>
-    <th>Sub brand</th>
-    <th>Model</th>
-    <th>Plate</th>
-    <th>Serial numero</th>
-    <th>Color</th>
-    <th>Stolen</th>
-    <th>Status</th>
-    <th>Details</th>
-    <th>Person</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+      </tr>
+    </thead>
+    <% @vehicles.each do |vehicle| %>
+      <tbody>
+        <tr>
+          <td><%= vehicle.id %></td>
+          <td><%= vehicle.brand %></td>
+          <td><%= vehicle.line %></td>
+          <td><%= vehicle.model %></td>
+          <td><%= vehicle.plate %></td>
+          <td><%= vehicle.serial_number %></td>
+          <td><%= vehicle.color %></td>
+          <td><%= vehicle.stolen %></td>
+          <td><%= vehicle.status %></td>
+          <td><%= vehicle.details %></td>
+          <td><%= vehicle.person.fullname %></td>
+          <td>
+            <ul class="nav nav-pills">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" title='<%=t(:actions)%>'><i class="icon-cog"></i>&nbsp;<i class="icon-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Show', vehicle %></li>
+                  <li><%= link_to 'Edit', edit_vehicle_path(vehicle) %></li>
+                  <li><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                </ul>
+              </li>
+            </ul>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<% @vehicles.each do |vehicle| %>
-  <tr>
-    <td><%= vehicle.id %></td>
-    <td><%= vehicle.brand %></td>
-    <td><%= vehicle.sub_brand %></td>
-    <td><%= vehicle.model %></td>
-    <td><%= vehicle.plate %></td>
-    <td><%= vehicle.serial_numero %></td>
-    <td><%= vehicle.color %></td>
-    <td><%= vehicle.stolen %></td>
-    <td><%= vehicle.status %></td>
-    <td><%= vehicle.details %></td>
-    <td><%= vehicle.person_id %></td>
-    <td><%= link_to 'Show', vehicle %></td>
-    <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-    <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <br />
 
-<br />
-
-<%= link_to 'New Vehicle', new_vehicle_path %>
+  <%= link_to 'New Vehicle', new_vehicle_path, :class=>"btn btn-primary" %>
