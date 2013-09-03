@@ -34,6 +34,7 @@ gem "binding_of_caller"
 gem 'jquery-rails', '~> 2.0.1'
 gem "nested_form"
 gem 'ckeditor_rails'
+gem 'yaml_db'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
