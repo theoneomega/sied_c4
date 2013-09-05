@@ -18,7 +18,7 @@ class VehiclesControllerTest < ActionController::TestCase
 
   test "should create vehicle" do
     assert_difference('Vehicle.count') do
-      post :create, vehicle: { brand: @vehicle.brand, color: @vehicle.color, details: @vehicle.details, id: @vehicle.id, line: @vehicle.line, model: @vehicle.model, person_id: @vehicle.person_id, plate: @vehicle.plate, serial_number: @vehicle.serial_number, status: @vehicle.status, stolen: @vehicle.stolen }
+      post :create, vehicle: { brand: @vehicle.brand, color: @vehicle.color, details: @vehicle.details, id: @vehicle.id, line: @vehicle.line, model: @vehicle.model, person_id: @vehicle.person_id, serial_number: @vehicle.serial_number, status: @vehicle.status, stolen: @vehicle.stolen }
     end
 
     assert_redirected_to vehicle_path(assigns(:vehicle))
@@ -35,7 +35,7 @@ class VehiclesControllerTest < ActionController::TestCase
   end
 
   test "should update vehicle" do
-    put :update, id: @vehicle, vehicle: { brand: @vehicle.brand, color: @vehicle.color, details: @vehicle.details, id: @vehicle.id, line: @vehicle.line, model: @vehicle.model, person_id: @vehicle.person_id, plate: @vehicle.plate, serial_number: @vehicle.serial_number, status: @vehicle.status, stolen: @vehicle.stolen }
+    put :update, id: @vehicle, vehicle: { brand: @vehicle.brand, color: @vehicle.color, details: @vehicle.details, id: @vehicle.id, line: @vehicle.line, model: @vehicle.model, person_id: @vehicle.person_id, serial_number: @vehicle.serial_number, status: @vehicle.status, stolen: @vehicle.stolen }
     assert_redirected_to vehicle_path(assigns(:vehicle))
   end
 

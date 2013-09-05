@@ -18,6 +18,8 @@
 //= require jquery_nested_form
 //= require ckeditor-jquery
 //= require bootstrap-datepicker
+//= require cocoon
+
 
 
 $(function() {

@@ -1,4 +1,4 @@
 class PersonStatus < ActiveRecord::Base
   attr_accessible :description, :id
-  belongs_to :person
+  has_many :person, :dependent => :destroy
 end

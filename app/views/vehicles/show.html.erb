@@ -21,11 +21,6 @@
 </p>
 
 <p>
-  <b>Plate:</b>
-  <%= @vehicle.plate %>
-</p>
-
-<p>
   <b>Serial number:</b>
   <%= @vehicle.serial_number %>
 </p>
@@ -52,9 +47,9 @@
 
 <p>
   <b>Person:</b>
-  <%= @vehicle.person_id %>
+  <%= @vehicle.person.fullname %>
 </p>
 
 
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>
+<%= link_to 'Edit', edit_vehicle_path(@vehicle), :class => "btn btn-primary" %> |
+<%= link_to 'Back', vehicles_path , :class => "btn btn-danger"%>

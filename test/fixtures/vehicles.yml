@@ -5,7 +5,6 @@ one:
   brand: MyString
   line: MyString
   model: 1
-  plate: MyString
   serial_number: MyString
   color: MyString
   stolen: false
@@ -18,7 +17,6 @@ two:
   brand: MyString
   line: MyString
   model: 1
-  plate: MyString
   serial_number: MyString
   color: MyString
   stolen: false

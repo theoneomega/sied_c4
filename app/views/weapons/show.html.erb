@@ -32,14 +32,14 @@
 
 <p>
   <b>Person:</b>
-  <%= @weapon.person_id %>
+  <%= @weapon.person.fullname %>
 </p>
 
 <p>
   <b>Weapon type:</b>
-  <%= @weapon.weapon_type_id %>
+  <%= @weapon.weapon_type.desc %>
 </p>
 
 
-<%= link_to 'Edit', edit_weapon_path(@weapon) %> |
-<%= link_to 'Back', weapons_path %>
+<%= link_to 'Edit', edit_weapon_path(@weapon), :class => "btn btn-primary" %> |
+<%= link_to 'Back', weapons_path, :class => "btn btn-danger" %>

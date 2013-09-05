@@ -3,12 +3,6 @@ Sied::Application.routes.draw do
   resources :vehicles
 
 
-  resources :weapon_criminalgroups
-
-
-  resources :vehicles_criminalgroups
-
-
   resources :criminal_groups
 
 

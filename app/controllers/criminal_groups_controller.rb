@@ -25,7 +25,6 @@ class CriminalGroupsController < ApplicationController
   # GET /criminal_groups/new.json
   def new
     @criminal_group = CriminalGroup.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @criminal_group }
