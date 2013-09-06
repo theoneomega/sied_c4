@@ -249,6 +249,9 @@ ActiveRecord::Schema.define(:version => 20130906174039) do
     t.datetime "updated_at",                                   :null => false
   end
 
+  
+  
+  
   create_table "weapon_types", :force => true do |t|
     t.string   "desc"
     t.datetime "created_at", :null => false
