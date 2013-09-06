@@ -19,7 +19,9 @@
         <td><%= criminal_group.id %></td>
         <td><%= criminal_group.description %></td>
         <td><%= criminal_group.vehicle_id %></td>
-        <td><%= criminal_group.weapon_id %></td>
+        <td>
+          <%= link_to criminal_group.weapons.count,criminal_group, :style=> " color: white;", :class => "label label-info" %> registered weapons
+        </td>
         <td><%= criminal_group.drug_id %></td>
         <td><%= criminal_group.area_id %></td>
         <td>

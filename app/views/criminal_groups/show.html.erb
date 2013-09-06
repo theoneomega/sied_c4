@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <%= notice %>
+</div>
 
 <p>
   <b>Id:</b>
@@ -17,7 +20,24 @@
 
 <p>
   <b>Weapon:</b>
-  <%= @criminal_group.weapon_id %>
+<div class="well">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <% @criminal_group.weapons.each do |weapon| %>
+      <tbody>
+        <tr>
+          <td><%= weapon.id %></td>
+          <td><%= weapon.fulldescription %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
 </p>
 
 <p>

@@ -4,3 +4,4 @@ class CriminalWeapon < ActiveRecord::Base
   belongs_to :weapon
   validates_uniqueness_of :criminal_group_id, :scope => :weapon_id
 end
+  
