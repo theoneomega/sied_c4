@@ -129,8 +129,16 @@ es:
       Obsevations: Observaciones
       Status: Estatus
       Actions: Accion
-  form:
-      first_name: Nombre
+    form:
+        first_name: Nombre
+        last_name1: Paterno
+        last_name2: Materno
+        birth_date: Fecha de Nacimiento
+        originative: Originario
+        genre: Genero
+        record: Antecedentes
+        profession: Profesion
+        observations: Observaciones
   errors:  
     messages:  
       not_found: "not found"  
