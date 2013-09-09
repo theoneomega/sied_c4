@@ -11,39 +11,56 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+
+  <div class="block">
+    <a href="#page-stats" class="block-heading" data-toggle="collapse">New criminal group</a>
+    <div id="page-stats" class="block-body collapse in">
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+      </div>
+
+      <div id="general-info2" class="block-body collapse in">
+        <p>
+          <%=f.fields_for :weapons do |builder| %>
+            <%= render 'weapons_fields', :f => builder %>
+          <%end%>
+          <%= f.link_to_add "add a weapon", :weapons, :class => "btn btn-primary" %>
+        </p>
+      </div>
+
+      <div id="general-info2" class="block-body collapse in">
+        <p>
+          <%=f.fields_for :vehicles do |builder| %>
+            <%= render 'vehicles_fields', :f => builder %>
+          <%end%>
+          <%= f.link_to_add "add a vehicle", :vehicles, :class => "btn btn-primary" %>
+        </p>
+      </div>
+
+      <div id="general-info2" class="block-body collapse in">
+        <p>
+          <%=f.fields_for :drugs do |builder| %>
+            <%= render 'drugs_fields', :f => builder %>
+          <%end%>
+          <%= f.link_to_add "add a drug", :drugs, :class => "btn btn-primary" %>
+        </p>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :area_id %><br />
+        <%= f.collection_select(:area_id, Area.all, :id, :description, {:prompt => "seleccione area"}) %>
+      </div>
+      <div class="actions">
+        <%= button_tag( :class => "btn btn-primary") do %>
+          <i class="icon-save icon-white"> </i>Guardar Grupo criminal
+        <% end %>
+  <%#= f.submit nil, :class => "btn btn-primary"%> 
+      </div>
+    <% end %>
   </div>
 
-  <div id="general-info2" class="block-body collapse in">
-    <%=f.fields_for :criminal_weapon do |builder| %>
-      <%= render 'criminal_weapons_fields', :f => builder %>
-    <%end%>
-    <%= f.link_to_add "add existing weapon", :criminal_weapon, :class => "btn btn-primary" %> or 
-    <%=f.fields_for :weapons do |builder| %>
-      <%= render 'weapons_fields', :f => builder %>
-    <%end%>
-    <%= f.link_to_add "register a weapon", :weapons, :class => "btn btn-primary" %>
-  </div>
-  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :vehicle_id %><br />
-    <%= f.collection_select(:vehicle_id, Vehicle.all, :id, :fulldescription, {:prompt => "seleccione vehiculo"}) %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :drug_id %><br />
-    <%= f.collection_select(:drug_id, Drug.all, :id, :kind, {:prompt => "seleccione tipo de droga"}) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :area_id %><br />
-    <%= f.collection_select(:area_id, Area.all, :id, :description, {:prompt => "seleccione area"}) %>
-  </div>
-  <div class="actions">
-    <%= f.submit nil, :class => "btn btn-primary"%>
-  </div>
-<% end %>
+</div>
