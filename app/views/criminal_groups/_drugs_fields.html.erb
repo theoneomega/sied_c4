@@ -1,0 +1,22 @@
+<div class="block">
+  <a href="#drugs" class="block-heading" data-toggle="collapse">New Drug</a>
+  <div id="drug" class="block-body collapse in">
+    <div class="control-group">
+      <div class="control-group">
+        <div class="field">
+          <%= f.label :kind %><br />
+          <%= f.text_field :kind %>
+        </div>
+        <div class="field">
+          <%= f.label :quantity %><br />
+          <%= f.number_field :quantity %>
+        </div>
+        <div class="field">
+          <%= f.label :observations %><br />
+          <%= f.text_area :observations %>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
