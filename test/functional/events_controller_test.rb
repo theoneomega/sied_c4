@@ -18,7 +18,7 @@ class EventsControllerTest < ActionController::TestCase
 
   test "should create event" do
     assert_difference('Event.count') do
-      post :create, event: { address_id: @event.address_id, analyst_id: @event.analyst_id, arrested: @event.arrested, backup_file: @event.backup_file, crime_id: @event.crime_id, description: @event.description, drugs_id: @event.drugs_id, event_date: @event.event_date, hour: @event.hour, id: @event.id, observations: @event.observations, place_id: @event.place_id, priority: @event.priority, source: @event.source, status_event_id: @event.status_event_id, suspects: @event.suspects, township_id: @event.township_id, vehicles: @event.vehicles, victims: @event.victims, weapons_id: @event.weapons_id, zone_id: @event.zone_id }
+      post :create, event: { analist_id: @event.analist_id, area_id: @event.area_id, backup_file: @event.backup_file, crime_id: @event.crime_id, description: @event.description, detained: @event.detained, detained_id: @event.detained_id, drug_id: @event.drug_id, drugs: @event.drugs, event_date: @event.event_date, id: @event.id, interior_number: @event.interior_number, locality: @event.locality, observations: @event.observations, place_id: @event.place_id, priority_id: @event.priority_id, source: @event.source, status_id: @event.status_id, street: @event.street, suburb: @event.suburb, suspect_id: @event.suspect_id, suspects: @event.suspects, township_id: @event.township_id, vehicle_id: @event.vehicle_id, vehicles: @event.vehicles, victim_id: @event.victim_id, victims: @event.victims, weapon_id: @event.weapon_id, weapons: @event.weapons }
     end
 
     assert_redirected_to event_path(assigns(:event))
@@ -35,7 +35,7 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test "should update event" do
-    put :update, id: @event, event: { address_id: @event.address_id, analyst_id: @event.analyst_id, arrested: @event.arrested, backup_file: @event.backup_file, crime_id: @event.crime_id, description: @event.description, drugs_id: @event.drugs_id, event_date: @event.event_date, hour: @event.hour, id: @event.id, observations: @event.observations, place_id: @event.place_id, priority: @event.priority, source: @event.source, status_event_id: @event.status_event_id, suspects: @event.suspects, township_id: @event.township_id, vehicles: @event.vehicles, victims: @event.victims, weapons_id: @event.weapons_id, zone_id: @event.zone_id }
+    put :update, id: @event, event: { analist_id: @event.analist_id, area_id: @event.area_id, backup_file: @event.backup_file, crime_id: @event.crime_id, description: @event.description, detained: @event.detained, detained_id: @event.detained_id, drug_id: @event.drug_id, drugs: @event.drugs, event_date: @event.event_date, id: @event.id, interior_number: @event.interior_number, locality: @event.locality, observations: @event.observations, place_id: @event.place_id, priority_id: @event.priority_id, source: @event.source, status_id: @event.status_id, street: @event.street, suburb: @event.suburb, suspect_id: @event.suspect_id, suspects: @event.suspects, township_id: @event.township_id, vehicle_id: @event.vehicle_id, vehicles: @event.vehicles, victim_id: @event.victim_id, victims: @event.victims, weapon_id: @event.weapon_id, weapons: @event.weapons }
     assert_redirected_to event_path(assigns(:event))
   end
 

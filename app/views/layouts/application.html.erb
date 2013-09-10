@@ -148,69 +148,38 @@
 
         <h1 class="page-title"><%= eval("t(:w" + controller_name + ")") %></h1>
       </div>
+      
+      <%=yield :breadcrumb%>
+      
       <div class="container-fluid">
         <div class="row-fluid">
-          <% if flash[:notice] %>
-            <div class="alert alert-info">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              <%= flash[:notice] %>
-            </div>
-          <% end %>
-          <% if flash[:error] %>
-            <div class="alert alert-error">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              <%= flash[:error] %>
-            </div>
-          <% end %>
-          <% if flash[:alert] %>
-            <div class="alert alert-alert">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              <%= flash[:alert] %>
-            </div>
-          <% end %> 
+
+          <%=yield%>
+
+          <div class="row-fluid">
+
+            <footer>
+              <hr>
+              <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+              <p class="pull-right">A <a href="http://www.portnine.com/bootstrap-themes" target="_blank">Free Bootstrap Theme</a> by <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+
+
+              <p>&copy; 2012 <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+            </footer>
+
+          </div>
         </div>
       </div>
-          
-          
-          
-          
-          
-          
-          <ul class="breadcrumb">
-            <%=yield :breadcum%>
-            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-            <li class="active">Dashboard</li>
-          </ul>
 
-          <div class="container-fluid">
-            <div class="row-fluid">
+      <script src="lib/bootstrap/js/bootstrap.js"></script>
+      <script type="text/javascript">
+  $("[rel=tooltip]").tooltip();
+  $(function() {
+    $('.demo-cancel-click').click(function() {
+      return false;
+    });
+  });
+      </script>
 
-              <%=yield%>
-
-              <div class="row-fluid">
-
-                <footer>
-                  <hr>
-                  <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
-                  <p class="pull-right">A <a href="http://www.portnine.com/bootstrap-themes" target="_blank">Free Bootstrap Theme</a> by <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
-
-
-                  <p>&copy; 2012 <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
-                </footer>
-
-              </div>
-            </div>
-          </div>
-
-          <script src="lib/bootstrap/js/bootstrap.js"></script>
-          <script type="text/javascript">
-      $("[rel=tooltip]").tooltip();
-      $(function() {
-        $('.demo-cancel-click').click(function() {
-          return false;
-        });
-      });
-          </script>
-
-          </body>
-          </html>
+  </body>
+</html>

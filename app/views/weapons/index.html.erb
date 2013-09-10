@@ -1,4 +1,10 @@
-<h1>Listing weapons</h1>
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to t(:home), "welcome/index"%><span class="divider">/</span> </li>
+    <li><%=link_to t(:weapons), weapons_path%><span class="divider">/</span></li>
+    <li class="active"><%=t(:index)%></li>
+  </ul>
+<%end%>
 <div  class="well ">
   <table class="table table-condensed">
     <thead>
