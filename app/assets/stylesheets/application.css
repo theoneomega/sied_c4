@@ -12,6 +12,7 @@
  *= require bootstrap_and_overrides
  *= require datepicker
  *= require_tree .
+ *= require bootstrap-datetimepicker    
 */
 
 .dropdown-menu {
@@ -112,10 +113,10 @@
 }
 
 form textarea {
-width: 98%;
-height: 100px;
-overflow-y: scroll;
-resize: vertical;
+    width: 98%;
+    height: 100px;
+    overflow-y: scroll;
+    resize: vertical;
 }
 
 .error_msg {
@@ -210,7 +211,7 @@ resize: vertical;
 
 .shortcut-button span img {
     margin-bottom: 10px;
-        width: auto;
+    width: auto;
     height: 100px;
 }
 

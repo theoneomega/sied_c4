@@ -26,10 +26,18 @@
           <td><%= vehicle.model %></td>
           <td><%= vehicle.serial_number %></td>
           <td><%= vehicle.color %></td>
-          <td><%= vehicle.stolen %></td>
+          <%if vehicle.stolen==true%>
+            <td><%= "SI" %></td>
+          <%else%>
+            <td><%= "NO" %></td>
+          <%end%>
           <td><%= vehicle.status %></td>
           <td><%= vehicle.details %></td>
-          <td><%= vehicle.person.fullname %></td>
+          <%if vehicle.person_id %>
+            <td><%= vehicle.person.fullname %></td>
+          <%else%>
+            <td><%= vehicle.person_id %></td>
+          <%end%>
           <td>
             <ul class="nav nav-pills">
               <li class="dropdown">

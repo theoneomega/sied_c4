@@ -1,5 +1,7 @@
 class Person < ActiveRecord::Base
-  attr_accessible :alias, :birth_date, :ci, :first_name, :genre, :id, :last_name1, :last_name2, :observations, :originative, :profession, :record, :status_id, :fullname, :description
+  attr_accessible :alias, :birth_date, :ci, :first_name, :genre, :id, :last_name1
+  attr_accessible :last_name2, :observations, :originative, :profession, :record, :status_id
+  attr_accessible  :fullname, :description
   has_many :vehicles, :dependent => :destroy
   belongs_to :status
   has_many :weapons, :dependent => :destroy
