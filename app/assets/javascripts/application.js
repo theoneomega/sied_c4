@@ -17,9 +17,8 @@
 //= require twitter/bootstrap
 //= require jquery_nested_form
 //= require ckeditor-jquery
-//= require bootstrap-datepicker
 //= require cocoon
-//= require bootstrap-timepicker
+//= require bootstrap-datetimepicker
 
 
 $(function() {

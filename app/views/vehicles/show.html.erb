@@ -47,7 +47,11 @@
 
 <p>
   <b>Person:</b>
-  <%= @vehicle.person.fullname %>
+  <%if defined? @vehicle.person_id %>
+    <%= @vehicle.person_id %>
+  <%else%>
+    <%= @vehicle.person.fullname %>
+  <%end%>
 </p>
 
 

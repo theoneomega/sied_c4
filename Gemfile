@@ -15,6 +15,7 @@ gem 'bootstrap-timepicker-rails-addon'
 gem 'will_paginate-bootstrap'
 #gem "less-rails"
 gem 'therubyracer'
+gem 'bootstrap-datetimepicker-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
