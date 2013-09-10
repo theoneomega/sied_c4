@@ -126,6 +126,26 @@ es:
   edit: Editar
   exit: Salir
   "no": "No"
+  vehicles:
+    index:
+      Brand: Marca
+      Line: Linea
+      Model: Modelo
+      Serial_Number: No. de Serie
+      Color: Color
+      Stolen: Robado
+      Details: Detalles
+      Person: Persona
+    form:
+      brand: Marca
+      line: Linea
+      model: Modelo
+      serial_Number: No. de Serie
+      color: Color
+      stolen: Robado
+      details: Detalles
+      person: Persona
+      
   addresses:
     index:
       Street: Calle
