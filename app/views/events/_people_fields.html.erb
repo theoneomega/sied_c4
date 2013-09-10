@@ -1,5 +1,5 @@
 <div class="block">
-  <a href="#drugs" class="block-heading" data-toggle="collapse">new person</a>
+  <a href="#victims" class="block-heading" data-toggle="collapse">new person</a>
   <div id="drug" class="block-body collapse in">
     <div class="control-group">
       <div class="control-group">
@@ -54,6 +54,7 @@
           <%= f.label t'.status' %><br />
           <%= f.collection_select(:status_id, Status.where(:status_type => "persona"), :id, :description, {:prompt => "seleccione el estatus de la persona"}) %>
         </div>
+        <%=f.link_to_remove "remove person",:class => 'btn btn-danger'%>
       </div>
     </div>
   </div>

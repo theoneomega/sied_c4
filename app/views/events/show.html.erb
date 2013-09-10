@@ -40,20 +40,31 @@
   <%= @event.locality %>
 </p>
 
-<p>
-  <b>Victims:</b>
-  <%= @event.victims %>
-</p>
+<div class="block">
+  <a href="#victims" class="block-heading" data-toggle="collapse"><%= pluralize(@event.person.where(:status_id=>10001).count, "Victim") %></a>
+  <div id="victims" class="block-body collapse">
+    <div class="control-group">
+      <%@event.person.where(:status_id => 10001).each do |person|%>
+      <ul>
+        <li><%=person.fullname %></li>
+      </ul>
+      <%end%>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>Victim:</b>
-  <%= @event.victim_id %>
-</p>
-
-<p>
-  <b>Detained:</b>
-  <%= @event.detained %>
-</p>
+<div class="block">
+  <a href="#detained" class="block-heading" data-toggle="collapse"><%= pluralize(@event.person.where(:status_id=>10000).count, "Detenido") %></a>
+  <div id="detained" class="block-body collapse">
+    <div class="control-group">
+      <%@event.person.where(:status_id => 10000).each do |person|%>
+      <ul>
+        <li><%=person.fullname %></li>
+      </ul>
+      <%end%>
+    </div>
+  </div>
+</div>
 
 <p>
   <b>Detained:</b>
