@@ -7,7 +7,7 @@
 
 <p>
   <b>Priority:</b>
-  <%= @event.priority %>
+  <%= @event.priority_id %>
 </p>
 
 <p>
@@ -21,8 +21,23 @@
 </p>
 
 <p>
-  <b>Hour:</b>
-  <%= @event.hour %>
+  <b>Street:</b>
+  <%= @event.street %>
+</p>
+
+<p>
+  <b>Interior number:</b>
+  <%= @event.interior_number %>
+</p>
+
+<p>
+  <b>Suburb:</b>
+  <%= @event.suburb %>
+</p>
+
+<p>
+  <b>Locality:</b>
+  <%= @event.locality %>
 </p>
 
 <p>
@@ -31,8 +46,18 @@
 </p>
 
 <p>
-  <b>Arrested:</b>
-  <%= @event.arrested %>
+  <b>Victim:</b>
+  <%= @event.victim_id %>
+</p>
+
+<p>
+  <b>Detained:</b>
+  <%= @event.detained %>
+</p>
+
+<p>
+  <b>Detained:</b>
+  <%= @event.detained_id %>
 </p>
 
 <p>
@@ -41,8 +66,38 @@
 </p>
 
 <p>
+  <b>Suspect:</b>
+  <%= @event.suspect_id %>
+</p>
+
+<p>
   <b>Vehicles:</b>
   <%= @event.vehicles %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @event.vehicle_id %>
+</p>
+
+<p>
+  <b>Drugs:</b>
+  <%= @event.drugs %>
+</p>
+
+<p>
+  <b>Drug:</b>
+  <%= @event.drug_id %>
+</p>
+
+<p>
+  <b>Weapons:</b>
+  <%= @event.weapons %>
+</p>
+
+<p>
+  <b>Weapon:</b>
+  <%= @event.weapon_id %>
 </p>
 
 <p>
@@ -56,33 +111,18 @@
 </p>
 
 <p>
-  <b>Weapons:</b>
-  <%= @event.weapons_id %>
-</p>
-
-<p>
-  <b>Drugs:</b>
-  <%= @event.drugs_id %>
-</p>
-
-<p>
   <b>Source:</b>
   <%= @event.source %>
 </p>
 
 <p>
-  <b>Analyst:</b>
-  <%= @event.analyst_id %>
+  <b>Analist:</b>
+  <%= @event.analist_id %>
 </p>
 
 <p>
-  <b>Zone:</b>
-  <%= @event.zone_id %>
-</p>
-
-<p>
-  <b>Status event:</b>
-  <%= @event.status_event_id %>
+  <b>Area:</b>
+  <%= @event.area_id %>
 </p>
 
 <p>
@@ -101,8 +141,8 @@
 </p>
 
 <p>
-  <b>Address:</b>
-  <%= @event.address_id %>
+  <b>Status:</b>
+  <%= @event.status_id %>
 </p>
 
 

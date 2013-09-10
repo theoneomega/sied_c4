@@ -2,46 +2,62 @@
 
 one:
   id: 1
-  priority: MyString
-  event_date: 2013-08-28
+  priority_id: 1
+  event_date: 2013-09-10
   description: MyText
-  hour: 2013-08-28 14:03:13
-  victims: 1
-  arrested: 1
-  suspects: 1
-  vehicles: 1
+  street: MyString
+  interior_number: MyString
+  suburb: MyString
+  locality: MyString
+  victims: false
+  victim_id: 1
+  detained: false
+  detained_id: 1
+  suspects: false
+  suspect_id: 1
+  vehicles: false
+  vehicle_id: 1
+  drugs: false
+  drug_id: 1
+  weapons: false
+  weapon_id: 1
   observations: MyText
   backup_file: MyString
-  weapons_id: 1
-  drugs_id: 1
   source: MyString
-  analyst_id: 1
-  zone_id: 1
-  status_event_id: 1
+  analist_id: 1
+  area_id: 1
   crime_id: 1
   township_id: 1
   place_id: 1
-  address_id: 1
+  status_id: 1
 
 two:
   id: 1
-  priority: MyString
-  event_date: 2013-08-28
+  priority_id: 1
+  event_date: 2013-09-10
   description: MyText
-  hour: 2013-08-28 14:03:13
-  victims: 1
-  arrested: 1
-  suspects: 1
-  vehicles: 1
+  street: MyString
+  interior_number: MyString
+  suburb: MyString
+  locality: MyString
+  victims: false
+  victim_id: 1
+  detained: false
+  detained_id: 1
+  suspects: false
+  suspect_id: 1
+  vehicles: false
+  vehicle_id: 1
+  drugs: false
+  drug_id: 1
+  weapons: false
+  weapon_id: 1
   observations: MyText
   backup_file: MyString
-  weapons_id: 1
-  drugs_id: 1
   source: MyString
-  analyst_id: 1
-  zone_id: 1
-  status_event_id: 1
+  analist_id: 1
+  area_id: 1
   crime_id: 1
   township_id: 1
   place_id: 1
-  address_id: 1
+  status_id: 1

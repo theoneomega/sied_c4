@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130909214611) do
+ActiveRecord::Schema.define(:version => 20130910192439) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",                                  :null => false
@@ -27,33 +27,6 @@ ActiveRecord::Schema.define(:version => 20130909214611) do
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "i_act_adm_com_aut_typ_aut_id"
   add_index "active_admin_comments", ["namespace"], :name => "i_act_adm_com_nam"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "i_adm_not_res_typ_res_id"
-
-  create_table "addresses", :force => true do |t|
-    t.string   "street"
-    t.integer  "interior_number", :precision => 38, :scale => 0
-    t.string   "colony"
-    t.string   "locality"
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
-  end
-
-  create_table "admin_users", :force => true do |t|
-    t.string   "email",                                                 :default => "", :null => false
-    t.string   "encrypted_password",                                    :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :precision => 38, :scale => 0, :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                            :null => false
-    t.datetime "updated_at",                                                            :null => false
-  end
-
-  add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
-  add_index "admin_users", ["reset_password_token"], :name => "i_adm_use_res_pas_tok", :unique => true
 
   create_table "analysts", :force => true do |t|
     t.string   "analyst"
@@ -112,39 +85,37 @@ ActiveRecord::Schema.define(:version => 20130909214611) do
     t.datetime "updated_at",                                  :null => false
   end
 
-  create_table "event_statuses", :force => true do |t|
-    t.string   "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "events", :force => true do |t|
-    t.string   "priority"
+    t.integer  "priority_id",     :precision => 38, :scale => 0
     t.datetime "event_date"
     t.text     "description"
-    t.datetime "hour"
-    t.integer  "victims",         :precision => 38, :scale => 0
-    t.integer  "arrested",        :precision => 38, :scale => 0
-    t.integer  "suspects",        :precision => 38, :scale => 0
-    t.integer  "vehicles",        :precision => 38, :scale => 0
+    t.string   "street"
+    t.string   "interior_number"
+    t.string   "suburb"
+    t.string   "locality"
+    t.boolean  "victims",         :precision => 1,  :scale => 0
+    t.integer  "victim_id",       :precision => 38, :scale => 0
+    t.boolean  "detained",        :precision => 1,  :scale => 0
+    t.integer  "detained_id",     :precision => 38, :scale => 0
+    t.boolean  "suspects",        :precision => 1,  :scale => 0
+    t.integer  "suspect_id",      :precision => 38, :scale => 0
+    t.boolean  "vehicles",        :precision => 1,  :scale => 0
+    t.integer  "vehicle_id",      :precision => 38, :scale => 0
+    t.boolean  "drugs",           :precision => 1,  :scale => 0
+    t.integer  "drug_id",         :precision => 38, :scale => 0
+    t.boolean  "weapons",         :precision => 1,  :scale => 0
+    t.integer  "weapon_id",       :precision => 38, :scale => 0
     t.text     "observations"
     t.string   "backup_file"
-    t.integer  "weapons_id",      :precision => 38, :scale => 0
-    t.integer  "drugs_id",        :precision => 38, :scale => 0
     t.string   "source"
-    t.integer  "analyst_id",      :precision => 38, :scale => 0
-    t.integer  "zone_id",         :precision => 38, :scale => 0
-    t.integer  "status_event_id", :precision => 38, :scale => 0
+    t.integer  "analist_id",      :precision => 38, :scale => 0
+    t.integer  "area_id",         :precision => 38, :scale => 0
     t.integer  "crime_id",        :precision => 38, :scale => 0
     t.integer  "township_id",     :precision => 38, :scale => 0
     t.integer  "place_id",        :precision => 38, :scale => 0
-    t.integer  "address_id",      :precision => 38, :scale => 0
+    t.integer  "status_id",       :precision => 38, :scale => 0
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
-    t.string   "street"
-    t.string   "interior_number"
-    t.string   "colony"
-    t.string   "locality"
   end
 
   create_table "people", :force => true do |t|

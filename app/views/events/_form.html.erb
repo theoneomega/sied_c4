@@ -11,39 +11,100 @@
     </div>
   <% end %>
 
-
   <div class="field">
-    <%= f.label :priority %><br />
-    <%= f.collection_select(:priority, Priority.all, :id, :description, {:prompt => "seleccione prioridad"}) %>
+    <%= f.label :priority_id %><br />
+    <%= f.number_field :priority_id %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.text_field :event_date, :id=>"datetimepicker",:class => "datetimepicker"%>
   </div>
 
-  <div class="input-append bootstrap-timepicker">
-    <%= f.label :event_date %><br />
-    <%= f.text_field :event_date, :id => "dp1", :class => "input-small"%> 
-    <span class="add-on"><i class="icon-calendar"></i></span>
+
+  <div class="well">
+    <div id="datetimepicker1" class="input-append date">
+      <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+        </i>
+      </span>
+    </div>
   </div>
+  <script type="text/javascript">
+    $(function() {
+      $('#datetimepicker1').datetimepicker({
+        language: 'pt-BR'
+      });
+    });
+  </script>
 
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-
-
   <div class="field">
-    <%= f.label :victims %><br />
-    <%= f.number_field :victims %>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
   </div>
   <div class="field">
-    <%= f.label :arrested %><br />
-    <%= f.number_field :arrested %>
+    <%= f.label :interior_number %><br />
+    <%= f.text_field :interior_number %>
+  </div>
+  <div class="field">
+    <%= f.label :suburb %><br />
+    <%= f.text_field :suburb %>
+  </div>
+  <div class="field">
+    <%= f.label :locality %><br />
+    <%= f.text_field :locality %>
+  </div>
+  <div class="field">
+    <%= f.label :victims %><br />
+    <%= f.check_box :victims %>
+  </div>
+  <div class="field">
+    <%= f.label :victim_id %><br />
+    <%= f.number_field :victim_id %>
+  </div>
+  <div class="field">
+    <%= f.label :detained %><br />
+    <%= f.check_box :detained %>
+  </div>
+  <div class="field">
+    <%= f.label :detained_id %><br />
+    <%= f.number_field :detained_id %>
   </div>
   <div class="field">
     <%= f.label :suspects %><br />
-    <%= f.number_field :suspects %>
+    <%= f.check_box :suspects %>
+  </div>
+  <div class="field">
+    <%= f.label :suspect_id %><br />
+    <%= f.number_field :suspect_id %>
   </div>
   <div class="field">
     <%= f.label :vehicles %><br />
-    <%= f.number_field :vehicles %>
+    <%= f.check_box :vehicles %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_id %><br />
+    <%= f.number_field :vehicle_id %>
+  </div>
+  <div class="field">
+    <%= f.label :drugs %><br />
+    <%= f.check_box :drugs %>
+  </div>
+  <div class="field">
+    <%= f.label :drug_id %><br />
+    <%= f.number_field :drug_id %>
+  </div>
+  <div class="field">
+    <%= f.label :weapons %><br />
+    <%= f.check_box :weapons %>
+  </div>
+  <div class="field">
+    <%= f.label :weapon_id %><br />
+    <%= f.number_field :weapon_id %>
   </div>
   <div class="field">
     <%= f.label :observations %><br />
@@ -54,28 +115,16 @@
     <%= f.text_field :backup_file %>
   </div>
   <div class="field">
-    <%= f.label :weapons_id %><br />
-    <%= f.number_field :weapons_id %>
-  </div>
-  <div class="field">
-    <%= f.label :drugs_id %><br />
-    <%= f.number_field :drugs_id %>
-  </div>
-  <div class="field">
     <%= f.label :source %><br />
     <%= f.text_field :source %>
   </div>
   <div class="field">
-    <%= f.label :analyst_id %><br />
-    <%= f.number_field :analyst_id %>
+    <%= f.label :analist_id %><br />
+    <%= f.number_field :analist_id %>
   </div>
   <div class="field">
-    <%= f.label :zone_id %><br />
-    <%= f.number_field :zone_id %>
-  </div>
-  <div class="field">
-    <%= f.label :status_event_id %><br />
-    <%= f.number_field :status_event_id %>
+    <%= f.label :area_id %><br />
+    <%= f.number_field :area_id %>
   </div>
   <div class="field">
     <%= f.label :crime_id %><br />
@@ -90,8 +139,8 @@
     <%= f.number_field :place_id %>
   </div>
   <div class="field">
-    <%= f.label :address_id %><br />
-    <%= f.number_field :address_id %>
+    <%= f.label :status_id %><br />
+    <%= f.number_field :status_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

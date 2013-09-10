@@ -1,50 +1,81 @@
-<h1> EVENTOS </h1>
+
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to t(:home), "welcome/index"%><span class="divider">/</span> </li>
+    <li><%=link_to t(:wevents), events_path%><span class="divider">/</span></li>
+    <li class="active"><%=t(:index)%></li>
+  </ul>
+<%end%>
 <div  class="well ">
-  <table class="table table-condensed table-striped">
+  <table class="table table-condensed">
     <thead>
       <tr>
         <th>Id</th>
-        <th><%=t'.Priority'%></th>
-        <th><%=t'.Event_date'%></th>
-        <th><%=t'.Description'%></th>
-        <th><%=t'.Hour'%></th>
-        <th><%=t'.Victims'%></th>
-        <th><%=t'.Arrested'%></th>
-        <th><%=t'.Observations'%></th>
-        <th><%=t'.Source'%></th>
-        <th><%=t'.Analyst'%></th>
-        <th><%=t'.Zone'%></th>
-        <th><%=t'.Status_event'%></th>
-        <th><%=t'.Crime'%></th>
-        <th><%=t'.Township'%></th>
-        <th><%=t'.Place'%></th>
-        <th><%=t'.Address'%></th>
-        <th><%=t(:actions)%></th>
+        <th>Priority</th>
+        <th>Event date</th>
+        <th>Description</th>
+        <th>Street</th>
+        <th>Interior number</th>
+        <th>Suburb</th>
+        <th>Locality</th>
+        <th>Victims</th>
+        <th>Victim</th>
+        <th>Detained</th>
+        <th>Detained</th>
+        <th>Suspects</th>
+        <th>Suspect</th>
+        <th>Vehicles</th>
+        <th>Vehicle</th>
+        <th>Drugs</th>
+        <th>Drug</th>
+        <th>Weapons</th>
+        <th>Weapon</th>
+        <th>Observations</th>
+        <th>Backup file</th>
+        <th>Source</th>
+        <th>Analist</th>
+        <th>Area</th>
+        <th>Crime</th>
+        <th>Township</th>
+        <th>Place</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
     </thead>
     <% @events.each do |event| %>
       <tbody>
         <tr>
           <td><%= event.id %></td>
-          <td><%= event.priority %></td>
+          <td><%= event.priority_id %></td>
           <td><%= event.event_date %></td>
           <td><%= event.description %></td>
-          <td><%= event.hour %></td>
+          <td><%= event.street %></td>
+          <td><%= event.interior_number %></td>
+          <td><%= event.suburb %></td>
+          <td><%= event.locality %></td>
           <td><%= event.victims %></td>
-          <td><%= event.arrested %></td>
+          <td><%= event.victim_id %></td>
+          <td><%= event.detained %></td>
+          <td><%= event.detained_id %></td>
           <td><%= event.suspects %></td>
+          <td><%= event.suspect_id %></td>
           <td><%= event.vehicles %></td>
+          <td><%= event.vehicle_id %></td>
+          <td><%= event.drugs %></td>
+          <td><%= event.drug_id %></td>
+          <td><%= event.weapons %></td>
+          <td><%= event.weapon_id %></td>
           <td><%= event.observations %></td>
           <td><%= event.backup_file %></td>
-          <td><%= event.weapons_id %></td>
-          <td><%= event.drugs_id %></td>
           <td><%= event.source %></td>
-          <td><%= event.analyst_id %></td>
-          <td><%= event.zone_id %></td>
-          <td><%= event.status_event_id %></td>
+          <td><%= event.analist_id %></td>
+          <td><%= event.area_id %></td>
           <td><%= event.crime_id %></td>
           <td><%= event.township_id %></td>
           <td><%= event.place_id %></td>
-          <td><%= event.address_id %></td>
+          <td><%= event.status_id %></td>
           <td>
             <ul class="nav nav-pills">
               <li class="dropdown">
@@ -58,9 +89,10 @@
             </ul>
           </td>
         </tr>
-      </tbody>
-    <% end %>
+      <% end %>
+    </tbody>
   </table>
 
   <br />
-  <%= link_to 'New Event', new_event_path,:class => "btn btn-primary" %>
+
+  <%= link_to 'New Event', new_event_path, :class => "btn btn-primary" %>
