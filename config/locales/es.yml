@@ -142,7 +142,7 @@ es:
       Description: Descripcion
       Hour: Hora
       Victims: Victimas
-      Arrested: Detenidos
+      Detained: Detenidos
       Description: Descripcion
       Vehicles: Vehiculos
       Observations: Observaciones
@@ -156,7 +156,7 @@ es:
       Township: Municipio
       Place: Lugar
       Address: Direccion
-      
+      Suspect: Sospechoso
       
   criminal_groups: 
     index:
