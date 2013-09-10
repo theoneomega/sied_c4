@@ -21,7 +21,11 @@
       <tbody>
         <tr>
           <td><%= person.ci %></td>
-          <td><%= person.fullname %></td>
+          <%if person.first_name && person.last_name1 &&person.last_name2 %>
+            <td><%= person.fullname %></td>
+          <%else%>
+            <td><%= person.first_name %></td>
+          <%end%>
           <td><%= person.alias %></td>
           <td><%= person.birth_date %></td>
           <td><%= person.originative %></td>
@@ -29,7 +33,11 @@
           <td><%= person.record %></td>
           <td><%= person.profession %></td>
           <td><%= person.observations %></td>
-          <td><%= person.status.description  %></td>
+          <%if person.status_id%>
+            <td><%= person.status.description  %></td>
+          <%else%>
+            <td><%= person.status_id  %></td>
+          <%end%>
           <td>
             <ul class="nav nav-pills">
               <li class="dropdown">

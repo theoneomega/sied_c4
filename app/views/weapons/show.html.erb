@@ -32,7 +32,9 @@
 
 <p>
   <b>Person:</b>
-  <%= @weapon.person.fullname %>
+  <%if @weapon.person_id%>
+    <%= @weapon.person.fullname %>
+  <%end%>
 </p>
 
 <p>

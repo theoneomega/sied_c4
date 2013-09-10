@@ -9,7 +9,7 @@
         <th>Serial number</th>
         <th>Weapon</th>
         <th>Caliber</th>
-        <th>Person</th>
+        <th>belongs to</th>
         <th>Weapon type</th>
         <th></th>
         <th></th>
@@ -24,7 +24,11 @@
         <td><%= weapon.serial_number %></td>
         <td><%= weapon.weapon %></td>
         <td><%= weapon.caliber %></td>
-        <td><%= weapon.person.fullname %></td>
+        <%if weapon.person_id%>
+          <td><%= weapon.person.fullname %></td>
+        <%else%>
+          <td><%= weapon.person_id %></td>
+        <%end%>
         <td><%= weapon.weapon_type.desc %></td>
         <td>
           <ul class="nav nav-pills">
