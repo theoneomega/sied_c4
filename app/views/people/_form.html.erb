@@ -36,6 +36,7 @@
     <%= f.label t'.birth_date'%><br />
     <%= f.text_field :birth_date, :id => "dp1"%> <i class="icon-th"></i>
   </div>
+
   <div class="field">
     <%= f.label t'.originative' %><br />
     <%= f.text_field :originative %>
@@ -66,12 +67,18 @@
 <% end %>
 <script>
   $(function() {
+
     window.prettyPrint && prettyPrint();
     $('#dp1').datepicker({
       language: 'es',
       format: 'yyyy-mm-dd',
       todayBtn: 'linked'
+
     });
+    $('#datetimepicker4').datetimepicker({
+      pickTime: false
+    });
+
 
     $('#dp2').datepicker();
     $('#btn2').click(function(e) {

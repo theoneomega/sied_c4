@@ -125,7 +125,16 @@ es:
   delete: Borrar
   edit: Editar
   exit: Salir
-  "no": "No"
+  no: "No"
+  name: Nombre
+  Birth date: Fecha de Nacimiento
+  Originative: Originario
+  Genre: Genero
+  Record: Detenido
+  Profession: Profesion
+  Obsevations: Observaciones
+  Status: Estatus
+  Actions: Accion
   events:
     index:
       Priority: Prioridad

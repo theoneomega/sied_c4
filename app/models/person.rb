@@ -7,6 +7,9 @@ class Person < ActiveRecord::Base
   has_many :weapons, :dependent => :destroy
   has_many :weapons
   has_many :vehicles
+  #nested atributes for events
+  has_many :event_person, :dependent => :destroy
+  
   
   validates :first_name, :presence => { :message => 'debes introducir nombre'}
   validates :last_name1, :presence => {:message => 'debes introducir apellido'}

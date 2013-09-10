@@ -17,16 +17,7 @@
 //= require twitter/bootstrap
 //= require jquery_nested_form
 //= require ckeditor-jquery
+//= require bootstrap-datepicker
 //= require cocoon
 //= require bootstrap-datetimepicker
 
-
-$(function() {
-    $(".date").datepicker({
-        dateFormat: 'dd/mm/yy',
-        minDate: new Date(),
-        weekStart: 1,
-        autoclose: true,
-        startDate: '0d'
-    });
-});

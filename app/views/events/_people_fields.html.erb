@@ -1,0 +1,67 @@
+<div class="field">
+  <%= f.label t(:ci) %><br />
+  <%= f.text_field :ci %>
+</div>
+<div class="field">
+  <%= f.label t(:first_name) %><br />
+  <%= f.text_field :first_name%>
+</div>
+<div class="field">
+  <%= f.label t(:last_name1) %><br />
+  <%= f.text_field :last_name1 %>
+</div>
+<div class="field">
+  <%= f.label t(:last_name2) %><br />
+  <%= f.text_field :last_name2 %>
+</div>
+<div class="field">
+  <%= f.label :alias %><br />
+  <%= f.text_field :alias %>
+</div>
+
+<div id="datetimepicker" class="input-append date">
+  <%= f.label t(:birth_date)%><br />
+  <%= f.date_select :birth_date, :class => "small"%> 
+  <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+</div>
+
+<div class="field">
+  <%= f.label t(:originative) %><br />
+  <%= f.text_field :originative %>
+</div>
+<div class="field">
+  <%= f.label t(:genre) %><br />
+  <%= f.text_field :genre %>
+</div>
+<div class="field">
+  <%= f.label t(:record) %><br />
+  <%= f.check_box :record %>
+</div>
+<div class="field">
+  <%= f.label t(:profession) %><br />
+  <%= f.text_field :profession %>
+</div>
+<div class="field">
+  <%= f.label t(:observations) %><br />
+  <%= f.text_area :observations %>
+</div>
+<div class="field">
+  <%= f.label :status_id %><br />
+  <%= f.collection_select(:status_id, Status.where(:status_type => "persona"), :id, :description, {:prompt => "seleccione el estatus de la persona"}) %>
+</div>
+<script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script> 
+<script type="text/javascript"
+        src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+</script>
+<script type="text/javascript"
+        src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+</script>
+
+<script type="text/javascript">
+  $('#datetimepicker').datetimepicker({
+    format: 'dd/MM/yyyy hh:mm:ss',
+    language: 'es-ES'
+  });
+</script>
