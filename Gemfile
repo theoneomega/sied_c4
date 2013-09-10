@@ -10,6 +10,8 @@ gem 'activerecord-oracle_enhanced-adapter'
 gem 'devise'
 #gem 'therubyracer', :platform => :ruby
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-timepicker-rails'
+gem 'bootstrap-timepicker-rails-addon'
 gem 'will_paginate-bootstrap'
 #gem "less-rails"
 gem 'therubyracer'

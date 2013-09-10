@@ -1,6 +1,6 @@
 <h1>Listing criminal_groups</h1>
 <div  class="well ">
-  <table class="table table-condensed">
+  <table class="table table-condensed table-striped">
     <thead>
       <tr>
         <th>Id</th>
@@ -9,21 +9,23 @@
         <th>Weapon</th>
         <th>Drug</th>
         <th>Area</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th><%=t(:actions)%></th>
       </tr>
     </thead>
     <% @criminal_groups.each do |criminal_group| %>
       <tr>
         <td><%= criminal_group.id %></td>
         <td><%= criminal_group.description %></td>
-        <td><%= criminal_group.vehicle_id %></td>
         <td>
-          <%= link_to criminal_group.weapons.count,criminal_group, :style=> " color: white;", :class => "label label-info" %> registered weapons
+          <%= link_to criminal_group.vehicles.count,criminal_group, :style=> " color: white;", :class => "label label-info" %>  vehicles
         </td>
-        <td><%= criminal_group.drug_id %></td>
-        <td><%= criminal_group.area_id %></td>
+        <td>
+          <%= link_to criminal_group.weapons.count,criminal_group, :style=> " color: white;", :class => "label label-info" %>  weapons
+        </td>
+        <td>
+          <%= link_to criminal_group.drugs.count,criminal_group, :style=> " color: white;", :class => "label label-info" %>  drugs
+        </td>
+        <td><%= criminal_group.area.description %></td>
         <td>
           <ul class="nav nav-pills">
             <li class="dropdown">

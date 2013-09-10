@@ -19,7 +19,7 @@
 //= require ckeditor-jquery
 //= require bootstrap-datepicker
 //= require cocoon
-
+//= require bootstrap-timepicker
 
 
 $(function() {

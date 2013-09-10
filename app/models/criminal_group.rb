@@ -1,7 +1,9 @@
 class CriminalGroup < ActiveRecord::Base
   attr_accessible :area_id, :description, :drug_id, :id, :vehicle_id, :weapon_id
   attr_accessible :vehicles_attributes, :criminal_weapon_attributes , :weapons_attributes
+  attr_accessible :criminal_vehicle_attributes
   attr_accessible :drugs_attributes, :criminal_drugs_attributes
+  belongs_to :area
   has_many :vehicles, :through => :criminal_vehicles
   has_many :weapons, :through => :criminal_weapons
   has_many :drugs, :through => :criminal_drugs
