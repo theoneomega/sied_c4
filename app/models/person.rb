@@ -11,7 +11,7 @@ class Person < ActiveRecord::Base
   has_many :event_person, :dependent => :destroy
   
   
-  validates :first_name, :presence => { :message => 'debes introducir nombre'}
+  validates :first_name, :presence => {:message => 'debes introducir nombre'}
   validates :last_name1, :presence => {:message => 'debes introducir apellido'}
   validates :last_name2, :presence => {:message => 'debes introducir apellido'}
   

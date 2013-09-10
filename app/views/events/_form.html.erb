@@ -43,6 +43,10 @@
     <%= f.label :locality %><br />
     <%= f.text_field :locality %>
   </div>
+  <div class="field">
+    <%= f.label :victims %><br />
+    <%= f.check_box :victims %>
+  </div>
 
   <div id="general-info2" class="block-body collapse in">
     <p>
@@ -55,10 +59,7 @@
 
 
 
-  <div class="field">
-    <%= f.label :victims %><br />
-    <%= f.check_box :victims %>
-  </div>
+
   <div class="field">
     <%= f.label :victim_id %><br />
     <%= f.number_field :victim_id %>

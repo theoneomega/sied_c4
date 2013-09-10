@@ -125,16 +125,7 @@ es:
   delete: Borrar
   edit: Editar
   exit: Salir
-  no: "No"
-  name: Nombre
-  Birth date: Fecha de Nacimiento
-  Originative: Originario
-  Genre: Genero
-  Record: Detenido
-  Profession: Profesion
-  Obsevations: Observaciones
-  Status: Estatus
-  Actions: Accion
+  "no": "No"
   events:
     index:
       Priority: Prioridad
@@ -156,7 +147,23 @@ es:
       Township: Municipio
       Place: Lugar
       Address: Direccion
+
       Suspect: Sospechoso
+
+    people_fields:
+      first_name: Nombre
+      last_name1: Apellido Paterno
+      last_name2: Apellido Materno
+      birth_date: Fecha de Nacimiento
+      originative: Originario
+      genre: Genero
+      record: Detenido
+      profession: Profesion
+      obsevations: Observaciones
+      status: Estatus
+      actions: Accion
+      observations: Observaciones
+      status: Estatus
       
   criminal_groups: 
     index:
