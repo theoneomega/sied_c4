@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   attr_accessible :detained, :detained_id, :drug_id, :drugs, :event_date, :id
   attr_accessible :interior_number, :locality, :observations, :place_id, :priority_id
   attr_accessible:source, :status_id, :street, :suburb, :suspect_id, :suspects, :township_id
-  attr_accessible :vehicle_id, :vehicles, :victim_id, :victims, :weapon_id, :weapons
+  attr_accessible :vehicle_id, :vehicles, :victim_id, :victims, :weapon_id, :weapons, :person_attributes
   
   belongs_to :priority
   has_many :event_person, :dependent => :destroy

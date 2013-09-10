@@ -62,3 +62,8 @@ td.day {
 .datepicker table th {
     color: #999;
 }
+select.date-select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
