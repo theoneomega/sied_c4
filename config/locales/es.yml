@@ -98,6 +98,12 @@ es:
       format: ! '%{attribute} %{message}'
   
   wdrugs: Drogas
+  wevents: Eventos
+  wpersons: Personas
+  wtowns: Municipio
+  Wweapons Types: Tipos de Arma
+  Wcriminal Group: Grupo Criminal
+  wcrimes: Crimen
   whome: Inicio
   wvehicles: Vehiculos
   wweapons: Armas
@@ -120,6 +126,27 @@ es:
   edit: Editar
   exit: Salir
   "no": "No"
+  addresses:
+    index:
+      Street: Calle
+      Interior number: Numero interior
+      Colony: Colonia
+      Locality: Localidad
+    form:
+      street: Calle
+      interior_number: Numero interior
+      colony: Colonia
+      locality: Localidad
+      
+  drugs:
+    index:
+      kind: Tipo
+      Quantity: Cantidad
+      Observations: Observaciones
+    form: 
+      kind: Tipo
+      quantity: Cantidad
+      observations: Observaciones
   people:
     index:
       name: Nombre
