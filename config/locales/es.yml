@@ -126,6 +126,35 @@ es:
   edit: Editar
   exit: Salir
   "no": "No"
+  events:
+    index:
+      Priority: Prioridad
+      Event_date: Fecha
+      Description: Descripcion
+      Hour: Hora
+      Victims: Victimas
+      Arrested: Detenidos
+      Description: Descripcion
+      Vehicles: Vehiculos
+      Observations: Observaciones
+      Backup_files: Antecedentes
+      Weapons: Armas
+      Drugs: Drogas
+      Analyst: Analista
+      Zone: Zona
+      Status_event: Status
+      Crime: Crimen
+      Township: Municipio
+      Place: Lugar
+      Address: Direccion
+      
+      
+  criminal_groups: 
+    index:
+      Description: Descripcion
+      Vehicle: Vehiculos
+      Weapon: Armas
+      Drug: Drogas
   vehicles:
     index:
       Brand: Marca
@@ -140,7 +169,7 @@ es:
       brand: Marca
       line: Linea
       model: Modelo
-      serial_Number: No. de Serie
+      serial_number: No de Serie
       color: Color
       stolen: Robado
       details: Detalles

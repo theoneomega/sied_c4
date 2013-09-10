@@ -1,29 +1,24 @@
-<h1>Listing events</h1>
+<h1> EVENTOS </h1>
 <div  class="well ">
   <table class="table table-condensed table-striped">
     <thead>
       <tr>
         <th>Id</th>
-        <th>Priority</th>
-        <th>Event date</th>
-        <th>Description</th>
-        <th>Hour</th>
-        <th>Victims</th>
-        <th>Arrested</th>
-        <th>Suspects</th>
-        <th>Vehicles</th>
-        <th>Observations</th>
-        <th>Backup file</th>
-        <th>Weapons</th>
-        <th>Drugs</th>
-        <th>Source</th>
-        <th>Analyst</th>
-        <th>Zone</th>
-        <th>Status event</th>
-        <th>Crime</th>
-        <th>Township</th>
-        <th>Place</th>
-        <th>Address</th>
+        <th><%=t'.Priority'%></th>
+        <th><%=t'.Event_date'%></th>
+        <th><%=t'.Description'%></th>
+        <th><%=t'.Hour'%></th>
+        <th><%=t'.Victims'%></th>
+        <th><%=t'.Arrested'%></th>
+        <th><%=t'.Observations'%></th>
+        <th><%=t'.Source'%></th>
+        <th><%=t'.Analyst'%></th>
+        <th><%=t'.Zone'%></th>
+        <th><%=t'.Status_event'%></th>
+        <th><%=t'.Crime'%></th>
+        <th><%=t'.Township'%></th>
+        <th><%=t'.Place'%></th>
+        <th><%=t'.Address'%></th>
         <th><%=t(:actions)%></th>
     </thead>
     <% @events.each do |event| %>
