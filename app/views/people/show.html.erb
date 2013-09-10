@@ -62,7 +62,12 @@
 
 <p>
   <b>Status:</b>
-  <%= @person.status.description %>
+  <%if @person.status_id %>
+    <%= @person.status.description %>
+  <%else%>
+    <%= @person.status_id %>
+
+  <%end%>
 </p>
 
 

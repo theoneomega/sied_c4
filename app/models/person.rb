@@ -8,6 +8,10 @@ class Person < ActiveRecord::Base
   has_many :weapons
   has_many :vehicles
   
+  validates :first_name, :presence => { :message => 'debes introducir nombre'}
+  validates :last_name1, :presence => {:message => 'debes introducir apellido'}
+  validates :last_name2, :presence => {:message => 'debes introducir apellido'}
+  
   def fullname
     first_name.titlecase + " " + last_name1.titlecase + " " + last_name2.titlecase
   end
