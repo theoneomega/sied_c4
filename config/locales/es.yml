@@ -133,7 +133,7 @@ es:
       Description: Descripcion
       Hour: Hora
       Victims: Victimas
-      Arrested: Detenidos
+      Detained: Detenidos
       Description: Descripcion
       Vehicles: Vehiculos
       Observations: Observaciones
@@ -147,6 +147,9 @@ es:
       Township: Municipio
       Place: Lugar
       Address: Direccion
+
+      Suspect: Sospechoso
+
     people_fields:
       first_name: Nombre
       last_name1: Apellido Paterno
