@@ -3,7 +3,7 @@
 one:
   id: 1
   priority_id: 1
-  event_date: 2013-09-10
+  event_date: 2013-09-11
   description: MyText
   street: MyString
   interior_number: MyString
@@ -24,7 +24,7 @@ one:
   observations: MyText
   backup_file: MyString
   source: MyString
-  analist_id: 1
+  analyst_id: 1
   area_id: 1
   crime_id: 1
   township_id: 1
@@ -34,7 +34,7 @@ one:
 two:
   id: 1
   priority_id: 1
-  event_date: 2013-09-10
+  event_date: 2013-09-11
   description: MyText
   street: MyString
   interior_number: MyString
@@ -55,7 +55,7 @@ two:
   observations: MyText
   backup_file: MyString
   source: MyString
-  analist_id: 1
+  analyst_id: 1
   area_id: 1
   crime_id: 1
   township_id: 1

@@ -3,6 +3,9 @@ Sied::Application.routes.draw do
   resources :events
 
 
+  resources :localities
+
+
   resources :priorities
 
 

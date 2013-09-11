@@ -1,4 +1,6 @@
 es:
+  wsave: Guardar
+  wstatuses: Estatus
   date:
     abbr_day_names:
     - dom

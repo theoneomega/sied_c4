@@ -4,6 +4,7 @@ class Weapon < ActiveRecord::Base
   belongs_to :weapon_type
   belongs_to :person
   has_many :criminal_weapon, :dependent => :destroy
+  has_many :events, :dependent => :destroy
 #  belongs_to :criminal_group
   validates_presence_of :weapon_type_id, :presence => true, :message => 'selecciona tipo de arma'
   

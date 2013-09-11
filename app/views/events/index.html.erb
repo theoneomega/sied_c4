@@ -1,4 +1,3 @@
-
 <%content_for :breadcrumb do%>
   <ul class="breadcrumb">
     <li><%=link_to t(:home), "welcome/index"%><span class="divider">/</span> </li>
@@ -6,26 +5,15 @@
     <li class="active"><%=t(:index)%></li>
   </ul>
 <%end%>
-<div  class="well ">
+
+<div class="well">
   <table class="table table-condensed">
     <thead>
       <tr>
-        <th>Id</th>
         <th><%=t'.Priority'%></th>
         <th><%=t'.Event_date'%></th>
         <th><%=t'.Description'%></th>
-        <th><%=t'.Street'%></th>
-        <th><%=t'.Interior_number'%></th>
-        <th><%=t'.Colony'%></th>
         <th><%=t'.Locality'%></th>
-        <th><%=t'.Victims'%></th>
-        <th><%=t'.Detained'%></th>
-        <th><%=t'.Suspect'%></th>
-        <th><%=t'.Vehicle'%></th>
-        <th><%=t'.Drug'%></th>
-        <th><%=t'.Weapon'%></th>
-        <th><%=t'.Observation'%></th>
-        <th><%=t'.Backup_files'%></th>
         <th><%=t'.Source'%></th>
         <th><%=t'.Analyst'%></th>
         <th><%=t'.Zone'%></th>
@@ -34,42 +22,23 @@
         <th><%=t'.Place'%></th>
         <th><%=t'.Status_event'%></th>
         <th></th>
-        <th></th>
-        <th></th>
       </tr>
     </thead>
     <% @events.each do |event| %>
       <tbody>
         <tr>
-          <td><%= event.id %></td>
-          <td><%= event.priority_id %></td>
+          <td><%= event.priority.description %></td>
           <td><%= event.event_date %></td>
-          <td><%= event.description %></td>
-          <td><%= event.street %></td>
-          <td><%= event.interior_number %></td>
-          <td><%= event.suburb %></td>
+          <td><%= event.description.truncate(25, :omission => "...") %><%= link_to '(continua)', event %></td>
           <td><%= event.locality %></td>
-          <td><%= event.victims %></td>
-          <td><%= event.victim_id %></td>
-          <td><%= event.detained %></td>
-          <td><%= event.detained_id %></td>
-          <td><%= event.suspects %></td>
-          <td><%= event.suspect_id %></td>
-          <td><%= event.vehicles %></td>
-          <td><%= event.vehicle_id %></td>
-          <td><%= event.drugs %></td>
-          <td><%= event.drug_id %></td>
-          <td><%= event.weapons %></td>
-          <td><%= event.weapon_id %></td>
-          <td><%= event.observations %></td>
-          <td><%= event.backup_file %></td>
-          <td><%= event.source %></td>
-          <td><%= event.analist_id %></td>
-          <td><%= event.area_id %></td>
-          <td><%= event.crime_id %></td>
-          <td><%= event.township_id %></td>
-          <td><%= event.place_id %></td>
-          <td><%= event.status_id %></td>
+          <%# if event.source %>
+          <td><%= event.source.truncate(15, :omission => "...") %> </td>
+          <td><%= event.analyst.analyst %></td>
+          <td><%= event.area.description %></td>
+          <td><%= event.crime.crime %></td>
+          <td><%= event.township.township %></td>
+          <td><%= event.place.place %></td>
+          <td><%= event.status.description %></td>
           <td>
             <ul class="nav nav-pills">
               <li class="dropdown">
@@ -86,7 +55,7 @@
       <% end %>
     </tbody>
   </table>
-
+</div>
   <br />
 
   <%= link_to 'New Event', new_event_path, :class => "btn btn-primary" %>

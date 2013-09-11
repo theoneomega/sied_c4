@@ -1,8 +1,9 @@
 <div class="block">
-  <a href="#victims" class="block-heading" data-toggle="collapse">new person</a>
-  <div id="drug" class="block-body collapse in">
+  <a href="#person" class="block-heading" data-toggle="collapse">New person</a>
+  <div id="person" class="block-body collapse in">
     <div class="control-group">
       <div class="control-group">
+
         <div class="field">
           <%= f.label t(:ci) %><br />
           <%= f.text_field :ci %>
@@ -24,10 +25,9 @@
           <%= f.text_field :alias %>
         </div>
 
-        <div >
+        <div class="field">
           <%= f.label t'.birth_date'%><br />
-          <%= f.date_select :birth_date, {:prompt => { :day => 'Dia', :month => 'Mes', :year => 'Año' },:start_year => 1900}, {:class => 'date-select' } %>
-          <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+          <%= f.text_field :birth_date, :id => "dp1"%> <i class="icon-th"></i>
         </div>
 
         <div class="field">
@@ -51,10 +51,13 @@
           <%= f.text_area :observations %>
         </div>
         <div class="field">
-          <%= f.label t'.status' %><br />
+          <%= f.label :status_id %><br />
           <%= f.collection_select(:status_id, Status.where(:status_type => "persona"), :id, :description, {:prompt => "seleccione el estatus de la persona"}) %>
         </div>
-        <%=f.link_to_remove "remove person",:class => 'btn btn-danger'%>
+
+
+
+        <%=f.link_to_remove "Remove Person",:class => 'btn btn-danger'%>
       </div>
     </div>
   </div>

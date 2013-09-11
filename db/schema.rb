@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130910211805) do
+ActiveRecord::Schema.define(:version => 20130911214114) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",                                  :null => false
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
 
   create_table "analysts", :force => true do |t|
     t.string   "analyst"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "areas", :force => true do |t|
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
 
   create_table "crimes", :force => true do |t|
     t.string   "crime"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "criminal_drugs", :force => true do |t|
@@ -85,9 +85,30 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
     t.datetime "updated_at",                                  :null => false
   end
 
+  create_table "event_drugs", :force => true do |t|
+    t.integer  "event_id",   :precision => 38, :scale => 0
+    t.integer  "drug_id",    :precision => 38, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
   create_table "event_people", :force => true do |t|
     t.integer  "event_id",   :precision => 38, :scale => 0
     t.integer  "person_id",  :precision => 38, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "event_vehicles", :force => true do |t|
+    t.integer  "event_id",   :precision => 38, :scale => 0
+    t.integer  "vehicle_id", :precision => 38, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "event_weapons", :force => true do |t|
+    t.integer  "event_id",   :precision => 38, :scale => 0
+    t.integer  "weapon_id",  :precision => 38, :scale => 0
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
@@ -123,6 +144,14 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
     t.integer  "status_id",       :precision => 38, :scale => 0
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+    t.integer  "analyst_id",      :precision => 38, :scale => 0
+  end
+
+  create_table "localities", :force => true do |t|
+    t.integer  "township_id", :precision => 38, :scale => 0
+    t.string   "locality"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "people", :force => true do |t|
@@ -144,8 +173,8 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
 
   create_table "places", :force => true do |t|
     t.string   "place"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "priorities", :force => true do |t|
@@ -193,10 +222,9 @@ ActiveRecord::Schema.define(:version => 20130910211805) do
   end
 
   create_table "townships", :force => true do |t|
-    t.integer  "di",         :precision => 38, :scale => 0
     t.string   "township"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
