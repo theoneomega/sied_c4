@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'ruby-oci8'
+gem 'ruby-oci8', '~> 2.1.0'
 gem 'activerecord-oracle_enhanced-adapter'
 gem 'devise'
 #gem 'therubyracer', :platform => :ruby
@@ -16,6 +16,7 @@ gem 'will_paginate-bootstrap'
 #gem "less-rails"
 gem 'therubyracer'
 gem 'bootstrap-datetimepicker-rails'
+gem 'seed_dumper'
 
 # Gems used only for assets and not required
 # in production environments by default.

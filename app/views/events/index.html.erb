@@ -31,13 +31,29 @@
           <td><%= event.event_date %></td>
           <td><%= event.description.truncate(25, :omission => "...") %><%= link_to '(continua)', event %></td>
           <td><%= event.locality %></td>
-          <%# if event.source %>
+  <%# if event.source %>
           <td><%= event.source.truncate(15, :omission => "...") %> </td>
-          <td><%= event.analyst.analyst %></td>
+          <% if event.analyst %>
+            <td><%= event.analyst.analyst %></td>
+          <%else%>
+            <td>no especificado</td>
+          <%end%>
           <td><%= event.area.description %></td>
-          <td><%= event.crime.crime %></td>
-          <td><%= event.township.township %></td>
-          <td><%= event.place.place %></td>
+          <%if event.crime%>
+            <td><%= event.crime.crime %></td>
+          <%else%>
+            <td>no especificado</td>
+          <%end%>
+          <%if event.township%>
+            <td><%= event.township.township %></td>
+          <%else%>
+            <td>no especificado</td>
+          <%end%>
+          <%if event.place%>
+            <td><%= event.place.place %></td>
+          <%else%>
+            <td>no especificado</td>
+          <%end%>
           <td><%= event.status.description %></td>
           <td>
             <ul class="nav nav-pills">
@@ -56,6 +72,6 @@
     </tbody>
   </table>
 </div>
-  <br />
+<br />
 
-  <%= link_to 'New Event', new_event_path, :class => "btn btn-primary" %>
+<%= link_to 'New Event', new_event_path, :class => "btn btn-primary" %>

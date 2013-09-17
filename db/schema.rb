@@ -13,25 +13,19 @@
 
 ActiveRecord::Schema.define(:version => 20130911214114) do
 
-  create_table "active_admin_comments", :force => true do |t|
-    t.string   "resource_id",                                  :null => false
-    t.string   "resource_type",                                :null => false
-    t.integer  "author_id",     :precision => 38, :scale => 0
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
-    t.string   "namespace"
+  create_table "addresses", :force => true do |t|
+    t.string   "street"
+    t.integer  "interior_number", :precision => 38, :scale => 0
+    t.string   "colony"
+    t.string   "locality"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], :name => "i_act_adm_com_aut_typ_aut_id"
-  add_index "active_admin_comments", ["namespace"], :name => "i_act_adm_com_nam"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "i_adm_not_res_typ_res_id"
 
   create_table "analysts", :force => true do |t|
     t.string   "analyst"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "areas", :force => true do |t|
@@ -42,8 +36,8 @@ ActiveRecord::Schema.define(:version => 20130911214114) do
 
   create_table "crimes", :force => true do |t|
     t.string   "crime"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "criminal_drugs", :force => true do |t|
@@ -173,20 +167,14 @@ ActiveRecord::Schema.define(:version => 20130911214114) do
 
   create_table "places", :force => true do |t|
     t.string   "place"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "priorities", :force => true do |t|
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "projects", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "roles", :force => true do |t|
@@ -211,20 +199,11 @@ ActiveRecord::Schema.define(:version => 20130911214114) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "tasks", :force => true do |t|
-    t.integer  "project_id",    :precision => 38, :scale => 0
-    t.integer  "admin_user_id", :precision => 38, :scale => 0
-    t.string   "title"
-    t.boolean  "is_done",       :precision => 1,  :scale => 0
-    t.datetime "due_date"
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
-  end
-
   create_table "townships", :force => true do |t|
+    t.integer  "di",         :precision => 38, :scale => 0
     t.string   "township"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "users", :force => true do |t|
