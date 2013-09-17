@@ -84,8 +84,8 @@
       <div id="suspects" class="block-body collapse">
         <div class="control-group">
           <%@event.person.where(:status_id => 10002).each do |person|%>
-            <ul>
-              <li><%=person.fullname %></li>
+          <ul class="inline">
+              <li><i class="icon-paper-clip"> </i><%=person.fullname %></li>
             </ul>
           <%end%>
         </div>
@@ -147,8 +147,10 @@
     </p>
 
     <p>
-      <b>Analyst:</b>
-      <%= @event.analyst.analyst%>
+      <%if @event.analyst !=nil%>
+        <b>Analyst:</b>
+        <%= @event.analyst.analyst%>
+      <%end%>
     </p>
 
     <p>
@@ -158,17 +160,23 @@
 
     <p>
       <b>Crime:</b>
-      <%= @event.crime.crime %>
+      <%if @event.crime !=nil%>
+        <%= @event.crime.crime %>
+      <%end%>
     </p>
 
     <p>
       <b>Township:</b>
-      <%= @event.township.township %>
+      <%if @event.township !=nil%>
+        <%= @event.township.township %>
+      <%end%>
     </p>
 
     <p>
       <b>Place:</b>
-      <%= @event.place.place %>
+      <%if @event.place !=nil%>
+        <%= @event.place.place %>
+      <%end%>
     </p>
 
     <p>
