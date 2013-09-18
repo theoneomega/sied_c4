@@ -27,14 +27,26 @@
     <% @events.each do |event| %>
       <tbody>
         <tr>
-          <td><%= event.priority.description %></td>
+          
+          <%if event.priority_id==10000%>
+            <td><span class="label label-important"><%= event.priority.description %></span></td>
+          <%elsif event.priority_id==10001%>
+            <td><span class="label label-warning"><%= event.priority.description %></span></td>
+            <%else%>
+            <td><span class="label label-inverse"><%= event.priority.description %></span></td>
+          <%end%>
           <td><%= event.event_date %></td>
           <%if event.description%>
             <td><%= event.description.truncate(25, :omission => "...") %><%= link_to '(continua)', event %></td>
+          <%else%>
+            <td>N/A</td>
           <%end%>
           <td><%= event.locality %></td>
-  <%# if event.source %>
-          <td><%= event.source.truncate(15, :omission => "...") %> </td>
+          <% if event.source %>
+            <td><%= event.source.truncate(15, :omission => "...") %> </td>
+          <%else%>
+            <td></td>
+          <%end%>
           <% if event.analyst %>
             <td><%= event.analyst.analyst %></td>
           <%else%>
