@@ -29,7 +29,9 @@
         <tr>
           <td><%= event.priority.description %></td>
           <td><%= event.event_date %></td>
-          <td><%= event.description.truncate(25, :omission => "...") %><%= link_to '(continua)', event %></td>
+          <%if event.description%>
+            <td><%= event.description.truncate(25, :omission => "...") %><%= link_to '(continua)', event %></td>
+          <%end%>
           <td><%= event.locality %></td>
   <%# if event.source %>
           <td><%= event.source.truncate(15, :omission => "...") %> </td>
@@ -54,7 +56,11 @@
           <%else%>
             <td>no especificado</td>
           <%end%>
-          <td><%= event.status.description %></td>
+          <%if event.status%>
+            <td><%= event.status.description %></td>
+          <%else%>
+            <td>sin estatus</td>
+          <%end%>
           <td>
             <ul class="nav nav-pills">
               <li class="dropdown">
